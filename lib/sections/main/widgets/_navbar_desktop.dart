@@ -29,19 +29,14 @@ class _NavbarDesktop extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5.0),
                 side: BorderSide(
-                  color: AppTheme.c!.primary!,
+                  color: Colors.green,
                 ),
               ),
-              onPressed: () {
-                html.window.open(
-                  StaticUtils.resume,
-                  "pdf",
-                );
-              },
+              onPressed: () => openURL("https://wa.me/966551028284"),
               child: Padding(
                 padding: Space.all(1.25, 0.45),
                 child: Text(
-                  'RESUME',
+                  'WhatsApp',
                   style: AppText.l1b,
                 ),
               ),

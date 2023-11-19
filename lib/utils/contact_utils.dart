@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ContactUtils {
   static const List<IconData> contactIcon = [
-    Icons.home,
+    Icons.location_pin,
     Icons.phone,
     Icons.mail,
   ];
@@ -14,8 +14,8 @@ class ContactUtils {
   ];
 
   static const List<String> details = [
-    "Attock, Pakistan",
-    "(+92) 346 0159889",
-    "hamza.6.shakeel@gmail.com",
+    "Taif, Saudi",
+    "+966551028284",
+    "eng.okody@Gmail.com",
   ];
 }

@@ -29,7 +29,7 @@ class _ServiceCardState extends State<_ServiceCard> {
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
       onTap: () {
-        cardKey.currentState!.toggleCard();
+        // cardKey.currentState!.toggleCard();
       },
       onHover: (isHovering) {
         if (isHovering) {
@@ -102,10 +102,6 @@ class _ServiceCardState extends State<_ServiceCard> {
               Image.asset(
                 widget.serviceIcon,
                 height: AppDimensions.normalize(30),
-                color: widget.serviceIcon.contains(StaticUtils.openSource) &&
-                        !appProvider.isDark
-                    ? Colors.black
-                    : null,
               ),
               Space.y1!,
               Text(

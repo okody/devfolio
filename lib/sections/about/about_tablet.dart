@@ -34,11 +34,11 @@ class AboutTab extends StatelessWidget {
               text: 'Get to know me :)',
             ),
           ),
-          Space.y1!,
-          Image.asset(
-            StaticUtils.mobilePhoto,
-            height: height * 0.27,
-          ),
+          // Space.y1!,
+          // Image.asset(
+          //   StaticUtils.mobilePhoto,
+          //   height: height * 0.27,
+          // ),
           SizedBox(
             height: height * 0.03,
           ),
@@ -78,7 +78,7 @@ class AboutTab extends StatelessWidget {
               color: AppTheme.c!.primary,
             ),
           ),
-          Row(
+          Wrap(
             children: kTools
                 .map(
                   (e) => ToolTechWidget(techName: e),
@@ -93,12 +93,12 @@ class AboutTab extends StatelessWidget {
           Space.y!,
           Row(
             children: [
-              Column(
+              const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   AboutMeData(
                     data: "Name",
-                    information: "Muhammad Hamza",
+                    information: "Osama Kody",
                   ),
                   AboutMeData(
                     data: "Age",
@@ -109,16 +109,16 @@ class AboutTab extends StatelessWidget {
               SizedBox(
                 width: width > 710 ? width * 0.2 : width * 0.05,
               ),
-              Column(
+              const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   AboutMeData(
                     data: "Email",
-                    information: "hamza.6.shakeel@gmail.com",
+                    information: "eng.okody@gmail.com",
                   ),
                   AboutMeData(
                     data: "From",
-                    information: "Attock, PK",
+                    information: "Taif, Saudi Arabia",
                   ),
                 ],
               ),
@@ -149,21 +149,21 @@ class AboutTab extends StatelessWidget {
                   ),
                 ),
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                    children: WorkUtils.logos
-                        .asMap()
-                        .entries
-                        .map(
-                          (e) => CommunityIconBtn(
-                            icon: e.value,
-                            link: WorkUtils.communityLinks[e.key],
-                            height: WorkUtils.communityLogoHeight[e.key],
-                          ),
-                        )
-                        .toList()),
-              ),
+              // SingleChildScrollView(
+              //   scrollDirection: Axis.horizontal,
+              //   child: Row(
+              //       children: WorkUtils.logos
+              //           .asMap()
+              //           .entries
+              //           .map(
+              //             (e) => CommunityIconBtn(
+              //               icon: e.value,
+              //               link: WorkUtils.communityLinks[e.key],
+              //               height: WorkUtils.communityLogoHeight[e.key],
+              //             ),
+              //           )
+              //           .toList()),
+              // ),
             ],
           )
         ],

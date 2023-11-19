@@ -4,6 +4,8 @@ import 'package:folio/configs/configs.dart';
 import 'package:folio/constants.dart';
 import 'package:folio/utils/project_utils.dart';
 import 'package:folio/utils/utils.dart';
+import 'package:folio/utils/work_utils.dart';
+import 'package:folio/widget/community_button.dart';
 import 'package:folio/widget/custom_text_heading.dart';
 import 'package:folio/widget/project_card.dart';
 
@@ -42,17 +44,24 @@ class PortfolioMobileTab extends StatelessWidget {
             enableInfiniteScroll: false,
           ),
         ),
-        Space.y!,
-        SizedBox(
-          height: AppDimensions.normalize(14),
-          width: AppDimensions.normalize(50),
-          child: OutlinedButton(
-            onPressed: () => openURL(StaticUtils.gitHub),
-            child: Text(
-              'See More',
-              style: AppText.l1b,
-            ),
-          ),
+        const CustomSectionHeading(
+          text: "\nAlso Work on",
+        ),
+        const CustomSectionSubHeading(
+          text: "Here are some of the projects that I work on :)\n\n",
+        ),
+        Row(
+          children: [
+            ...WorkUtils.logos.asMap().entries.map(
+                  (e) => Expanded(
+                    child: CommunityIconBtn(
+                      icon: e.value,
+                      link: WorkUtils.communityLinks[e.key],
+                      height: 70,
+                    ),
+                  ),
+                )
+          ],
         )
       ],
     );

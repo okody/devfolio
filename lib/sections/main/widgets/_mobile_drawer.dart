@@ -68,14 +68,14 @@ class _MobileDrawer extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5.0),
                       side: BorderSide(color: AppTheme.c!.primary!)),
-                  onPressed: () => openURL(StaticUtils.resume),
+                  onPressed: () => openURL("https://wa.me/966551028284"),
                   child: const ListTile(
                     leading: Icon(
                       Icons.book,
-                      color: Colors.red,
+                      color: Colors.green,
                     ),
                     title: Text(
-                      'RESUME',
+                      'WhatsApp',
                     ),
                   ),
                 ),

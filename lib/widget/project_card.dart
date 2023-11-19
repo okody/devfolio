@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:folio/configs/configs.dart';
 import 'package:folio/constants.dart';
 import 'package:folio/provider/app_provider.dart';
+import 'package:get/get.dart';
 
 import 'package:provider/provider.dart';
 
@@ -40,11 +41,23 @@ class ProjectCardState extends State<ProjectCard> {
       hoverColor: Colors.transparent,
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
-      onTap: widget.projectLink == null
-          ? () {}
-          : () => openURL(
-                widget.projectLink!,
-              ),
+      onTap: () {
+        // Get.dialog(
+        //   Dialog(
+        //     child: Container(
+        //       color: Colors.black,
+        //       width: 100,
+        //       height: 100,
+        //     ),
+        //   ),
+        // );
+
+        if (widget.projectLink!.isNotEmpty) {
+          openURL(
+            widget.projectLink!,
+          );
+        }
+      },
       onHover: (isHovering) {
         if (isHovering) {
           setState(() {
@@ -135,6 +148,7 @@ class ProjectCardState extends State<ProjectCard> {
                 Text(
                   widget.projectDescription,
                   textAlign: TextAlign.center,
+                  style: const TextStyle(fontFamily: "Cairo"),
                 ),
                 SizedBox(
                   height: height * 0.01,

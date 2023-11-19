@@ -10,6 +10,14 @@ final kTools = [
   "Flutter",
   "Dart",
   "Python",
-  "Java",
-  "C++",
+  "Clean Code",
+  "Best Practices",
+  "Version Control (Github)",
+  "MVVM",
+  "Provider",
+  "Restful APIs",
+  "Responsive UI",
+  "Laravel Framework",
+  "MySQL",
+  "Firebase Services"
 ];

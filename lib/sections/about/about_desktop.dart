@@ -83,7 +83,7 @@ class AboutDesktop extends StatelessWidget {
                         ),
                       ),
                       Space.y!,
-                      Row(
+                      Wrap(
                         children: kTools
                             .map((e) => ToolTechWidget(
                                   techName: e,
@@ -95,14 +95,14 @@ class AboutDesktop extends StatelessWidget {
                         color: Colors.grey[800],
                         thickness: AppDimensions.normalize(0.5),
                       ),
-                      Row(
+                      const Row(
                         children: [
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
+                            children: [
                               AboutMeData(
                                 data: "Name",
-                                information: "Muhammad Hamza",
+                                information: "Osama Kody",
                               ),
                               AboutMeData(
                                 data: "Age",
@@ -110,52 +110,52 @@ class AboutDesktop extends StatelessWidget {
                               ),
                             ],
                           ),
-                          const Spacer(),
+                          Spacer(),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
+                            children: [
                               AboutMeData(
                                 data: "Email",
-                                information: "hamza.6.shakeel@gmail.com",
+                                information: "eng.okody@gmail.com",
                               ),
                               AboutMeData(
                                 data: "From",
-                                information: "Attock, PK",
+                                information: "Taif, Saudi",
                               ),
                             ],
                           ),
                         ],
                       ),
                       Space.y1!,
-                      Row(
+                      const Row(
                         children: [
-                          SizedBox(
-                            height: AppDimensions.normalize(13),
-                            width: AppDimensions.normalize(40),
-                            child: OutlinedButton(
-                              onPressed: () =>
-                                  html.window.open(StaticUtils.resume, 'pdf'),
-                              child: const Text(
-                                "Resume",
-                              ),
-                            ),
-                          ),
-                          Space.x1!,
-                          Container(
-                            color: Colors.grey[900]!,
-                            width: AppDimensions.normalize(30),
-                            height: AppDimensions.normalize(0.5),
-                          ),
-                          ...WorkUtils.logos.asMap().entries.map(
-                                (e) => Expanded(
-                                  child: CommunityIconBtn(
-                                    icon: e.value,
-                                    link: WorkUtils.communityLinks[e.key],
-                                    height:
-                                        WorkUtils.communityLogoHeight[e.key],
-                                  ),
-                                ),
-                              )
+                          // SizedBox(
+                          //   height: AppDimensions.normalize(13),
+                          //   width: AppDimensions.normalize(40),
+                          //   child: OutlinedButton(
+                          //     onPressed: () =>
+                          //         html.window.open(StaticUtils.resume, 'pdf'),
+                          //     child: const Text(
+                          //       "Resume",
+                          //     ),
+                          //   ),
+                          // ),
+                          // Space.x1!,
+                          // Container(
+                          //   color: Colors.grey[900]!,
+                          //   width: AppDimensions.normalize(30),
+                          //   height: AppDimensions.normalize(0.5),
+                          // ),
+                          // ...WorkUtils.logos.asMap().entries.map(
+                          //       (e) => Expanded(
+                          //         child: CommunityIconBtn(
+                          //           icon: e.value,
+                          //           link: WorkUtils.communityLinks[e.key],
+                          //           height:
+                          //               WorkUtils.communityLogoHeight[e.key],
+                          //         ),
+                          //       ),
+                          //     )
                         ],
                       ),
                     ],

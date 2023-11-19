@@ -30,11 +30,11 @@ class AboutMobile extends StatelessWidget {
           const CustomSectionSubHeading(
             text: 'Get to know me :)',
           ),
-          Space.y1!,
-          Image.asset(
-            StaticUtils.mobilePhoto,
-            height: height * 0.27,
-          ),
+          // Space.y1!,
+          // Image.asset(
+          //   StaticUtils.mobilePhoto,
+          //   height: height * 0.27,
+          // ),
           SizedBox(
             height: height * 0.03,
           ),
@@ -78,8 +78,8 @@ class AboutMobile extends StatelessWidget {
             ),
           ),
           Space.y!,
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          Wrap(
+            // mainAxisAlignment: MainAxisAlignment.center,
             children: kTools
                 .map(
                   (e) => ToolTechWidget(techName: e),
@@ -96,35 +96,35 @@ class AboutMobile extends StatelessWidget {
           ),
           const AboutMeData(
             data: "Name",
-            information: "Muhammad Hamza",
+            information: "Osama Kody",
           ),
           const AboutMeData(
             data: "Email",
-            information: "hamza.6.shakeel@gmail.com",
+            information: "eng.okody@gmail.com",
           ),
           Space.y!,
-          OutlinedButton(
-              child: const Text("Resume"),
-              onPressed: () {
-                kIsWeb
-                    ? html.window.open(StaticUtils.resume, "pdf")
-                    : openURL(StaticUtils.resume);
-              }),
-          Space.y!,
-          Wrap(
-              alignment: WrapAlignment.center,
-              crossAxisAlignment: WrapCrossAlignment.center,
-              children: WorkUtils.logos
-                  .asMap()
-                  .entries
-                  .map(
-                    (e) => CommunityIconBtn(
-                      icon: e.value,
-                      link: WorkUtils.communityLinks[e.key],
-                      height: WorkUtils.communityLogoHeight[e.key],
-                    ),
-                  )
-                  .toList()),
+          // OutlinedButton(
+          //     child: const Text("Resume"),
+          //     onPressed: () {
+          //       kIsWeb
+          //           ? html.window.open(StaticUtils.resume, "pdf")
+          //           : openURL(StaticUtils.resume);
+          //     }),
+          // Space.y!,
+          // Wrap(
+          //     alignment: WrapAlignment.center,
+          //     crossAxisAlignment: WrapCrossAlignment.center,
+          //     children: WorkUtils.logos
+          //         .asMap()
+          //         .entries
+          //         .map(
+          //           (e) => CommunityIconBtn(
+          //             icon: e.value,
+          //             link: WorkUtils.communityLinks[e.key],
+          //             height: WorkUtils.communityLogoHeight[e.key],
+          //           ),
+          //         )
+          //         .toList()),
         ],
       ),
     );

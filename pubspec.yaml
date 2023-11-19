@@ -39,6 +39,10 @@ dependencies:
 
   # cache
   shared_preferences: ^2.0.6
+  get: ^4.6.6
+  flutter_localizations:
+    sdk: flutter
+  intl: any
 
 
 dev_dependencies:
@@ -72,6 +76,10 @@ flutter:
     - family: Montserrat
       fonts:
         - asset: fonts/montserrat/montserrat.ttf
+    
+    - family: Cairo
+      fonts:
+        - asset: fonts/Cairo-Regular.ttf
     
     - family: Poppins
       fonts:
